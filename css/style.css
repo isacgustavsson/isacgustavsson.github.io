@@ -75,7 +75,7 @@ body {
     grid-template-areas:
       "header header header"
       "sidebar sidebar sidebar"
-      "hero hero hero"
+      ". hero ."
       "footer footer footer";
   }
 }
