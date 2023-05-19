@@ -4,58 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    <link rel="stylesheet" href="spinkit.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/33c19bf611.js"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>helloooo (:</title>
+    ></script>
+    <title>hello internet.</title>
   </head>
   <body>
-    <div class="container">
-      <div class="item item1">
-        <h1>vivid.</h1>
-        <ul>
-          <li>contact</li>
-          <li><i class="fa-solid fa-house"></i></li>
-        </ul>
+    <!--------------- Main Scroller --------------->
+    <main class="parallax">
+      <!--------------- Top Navigation --------------->
+      <div class="top-nav">
+        <img src="icon/instagram.png" alt="" class="icon" id="instagram-icon" />
+        <img src="icon/github.png" alt="" class="icon" id="github-icon" />
+        <img src="icon/behance.png" alt="" class="icon" id="behance-icon" />
       </div>
-      <div class="item item2">
-        <img
-          src="images/vivid-200.jpg"
-          srcset="
-            images/vivid-200.jpg   200w,
-            images/vivid-448.jpg   448w,
-            images/vivid-480.jpg   480w,
-            images/vivid-538.jpg   538w,
-            images/vivid-596.jpg   596w,
-            images/vivid-645.jpg   645w,
-            images/vivid-694.jpg   694w,
-            images/vivid-720.jpg   720w,
-            images/vivid-767.jpg   767w,
-            images/vivid-880.jpg   880w,
-            images/vivid-1179.jpg 1179w,
-            images/vivid-1400.jpg 1400w
-          "
-          alt=""
-        />
+
+      <!--------------- Hero Section --------------->
+
+      <!-- <div class="loading-animation" id="loading-grid">
+        <div class="sk-grid">
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+        </div>
+      </div> -->
+
+      <div class="hero">
+        <p class="header" id="greetingHeader1">Hello, i'm isac.</p>
+        <p class="header" id="greetingHeader2">
+          i'm a graphic design student from Jönköping, Sweden.
+        </p>
+
+        <i class="fa-solid fa-turn-down fa-bounce fa-2xl" id="scrollArrow"></i>
+
+        <p id="workHeader1">Portfolio</p>
+        <p id="workHeader2">
+          Below are a few of the projects that i have made or worked on.
+        </p>
+
+        <!--------------- Hero Cards --------------->
+
+        <div class="card" id="card1">
+          <img src="img/camera.png" alt="" id="camera-project" />
+
+          <!------ Overlay boxes ------>
+
+          <!-- Blue boxes -->
+
+          <div class="overlaybox" id="box1"></div>
+          <div class="overlaybox" id="box2"></div>
+          <div class="overlaybox" id="box3"></div>
+
+          <!-- Green boxes -->
+
+          <div class="overlaybox" id="box4"></div>
+          <div class="overlaybox" id="box5"></div>
+          <div class="overlaybox" id="box6"></div>
+
+          <p id="projectDescription">Skeumorphic Design</p>
+          <p id="projectParagraph">
+            This is a design that i made in adobe illustrator for a school
+            assignment using skeumorphic design principles.
+          </p>
+        </div>
+
+        <div class="card2"></div>
       </div>
-      <div class="item item3">
-        <ul>
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 🤟</li>
-          <li>item 4</li>
-          <li>item 5</li>
-          <li>item 6</li>
-        </ul>
-      </div>
-      <div class="item item4">
-        <h2>layout design by isac gustavsson</h2>
-      </div>
-    </div>
+    </main>
   </body>
 </html>
