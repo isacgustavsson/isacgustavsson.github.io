@@ -39,22 +39,21 @@ cardElements.forEach((card) => {
       trigger: "#card1",
       pin: false,
       // markers: true,
-      scrub: true,
-      start: 1100,
-      end: 1300,
+      scrub: 2,
+      start: 1150,
+      end: 1350,
     },
   });
 
-  tl.to("#box1", {
-    keyframes: [{ x: -485.5 }, { y: 480 }, { x: -364.5 }],
+  tl.from("#box1", {
+    keyframes: [{ scrub: true }, { x: -485.5 }, { x: -1200 }],
   });
 
   tl.to("#box2", {
     keyframes: [
       {
-        x: -606.5,
+        x: -1200,
       },
-      { y: 480 },
     ],
   });
 
@@ -63,8 +62,7 @@ cardElements.forEach((card) => {
       {
         y: -96,
       },
-      { x: -606.5 },
-      { y: 288 },
+      { x: -1200 },
     ],
   });
 
@@ -73,22 +71,19 @@ cardElements.forEach((card) => {
       {
         y: 96,
       },
-      { x: 605.5 },
-      { y: -385 },
-      { x: 486 },
+      { x: 1200 },
     ],
   });
 
   tl.to("#box5", {
     keyframes: [
       {
-        x: 605.5,
+        x: 1200,
       },
-      { y: -480 },
     ],
   });
 
   tl.to("#box6", {
-    keyframes: [{ x: 486.5 }, { y: -386 }],
+    keyframes: [{ x: 1200 }],
   });
 });

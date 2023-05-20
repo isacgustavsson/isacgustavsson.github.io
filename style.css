@@ -1,8 +1,9 @@
 /*************** General Settings ***************/
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 
 * {
   box-sizing: border-box;
@@ -38,19 +39,44 @@ body {
   scroll-behavior: smooth;
 }
 
-/*************** Top navigation ***************/
+/* @media screen and (max-width: 768px) {
+  .parallax {
+    grid-template-columns: repeat(6, 1fr);
+  }
 
-.top-nav {
-  display: grid;
+  .top-nav {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+  }
 
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  .top-nav #behance-icon {
+    width: 100%;
+    height: 3rem;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
 
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
+  .top-nav #instagram-icon {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
 
-  background: #fba94b;
-}
+  .top-nav #github-icon {
+    width: 100%;
+    height: 3em;
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+  }
+
+  .hero {
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-column: 1 / 6;
+    grid-row: 4 / 32;
+
+    background-color: #232528;
+  }
+} */
 
 /*************** Grid animation ***************/
 
@@ -63,7 +89,16 @@ body {
 
 /*************** Navigation icons ***************/
 
-.top-nav #behance-icon {
+.parallax #menu-bar {
+  grid-column: 12 / 13;
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  scale: 2;
+  color: #fba94b;
+}
+
+/* .parallax #behance-icon {
   width: 100%;
   height: 3rem;
   grid-column: 10 / 11;
@@ -74,25 +109,10 @@ body {
   justify-self: center;
 }
 
-.top-nav #instagram-icon {
-  width: 100%;
-  height: 3em;
-  grid-column: 11 / 12;
-  grid-row: 1 / 2;
-  object-fit: contain;
-  background: none;
-  align-self: center;
-  justify-self: center;
-}
-
-.top-nav #github-icon {
-  width: 100%;
-  height: 3em;
-  grid-column: 12 / 13;
-  grid-row: 1 / 2;
-  object-fit: contain;
-  background: none;
-  align-self: center;
+#behance-icon:hover,
+#instagram-icon:hover,
+#github-icon:hover {
+  cursor: pointer;
 }
 
 /*************** Hero Section ***************/
@@ -119,26 +139,31 @@ body {
   font-size: 4rem;
   color: #fba94b;
 
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
+  font-family: "Space Grotesk", sans-serif;
+
+  font-weight: 700;
+  font-kerning: auto;
 }
 
 .hero #greetingHeader2 {
-  grid-column: 2 / 12;
-  grid-row: 3 / 4;
+  grid-column: 2 / 9;
+  grid-row: 2 / 3;
   align-self: center;
   justify-self: flex-start;
   align-self: flex-start;
 
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-kerning: normal;
+
+  font-size: 1.75rem;
   color: #faedca;
 }
 
 .hero #scrollArrow {
-  grid-column: 8 / 9;
-  grid-row: 3;
-  justify-self: center;
+  grid-column: 9 / 10;
+  grid-row: 2 / 3;
+  justify-self: flex-start;
   align-self: center;
   scale: 1;
   color: #fba94b;
@@ -149,20 +174,24 @@ body {
   grid-row: 7 / 8;
   justify-self: center;
   align-self: center;
-  font-size: 3rem;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
+  font-size: 8rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   color: #fba94b;
+  font-kerning: auto;
 }
 
 .hero #workHeader2 {
   grid-column: 2 / 12;
-  grid-row: 8 / 9;
+  grid-row: 8 / 10;
   justify-self: center;
-  align-self: center;
-  font-size: 1.25rem;
-  font-family: "Source Sans Pro", sans-serif;
+  align-self: top;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.125rem;
   font-weight: 400;
+  font-kerning: normal;
+  max-width: 65ch;
   color: #faedca;
 }
 
@@ -174,62 +203,76 @@ body {
 }
 
 .hero #box1 {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
-  width: 100%;
-  height: 100%;
-  grid-column: 6 / 7;
+  width: 5em;
+  height: 5em;
+
+  grid-column: 9 / 10;
   grid-row: 2 / 3;
+  justify-self: flex-end;
+  align-self: center;
 }
 
 .hero #box2 {
-  width: 100%;
-  height: 100%;
-  grid-column: 7 / 8;
+  width: 5em;
+  height: 5em;
+
+  grid-column: 10 / 11;
   grid-row: 2 / 3;
-  justify-self: center;
+  justify-self: flex-start;
   align-self: center;
 }
 
 .hero #box3 {
-  width: 100%;
-  height: 100%;
-  grid-column: 7 / 8;
+  width: 5em;
+  height: 5em;
+
+  grid-column: 10 / 11;
   grid-row: 3 / 4;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
 
 .hero #box4 {
-  width: 100%;
-  height: 100%;
-  grid-column: 2 / 3;
+  width: 5em;
+  height: 5em;
+
+  grid-column: 3 / 4;
   grid-row: 6 / 7;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 
 .hero #box5 {
-  width: 100%;
-  height: 100%;
-  grid-column: 2 / 3;
+  width: 5em;
+  height: 5em;
+
+  grid-column: 3 / 4;
   grid-row: 7 / 8;
+  justify-self: flex-end;
+  align-self: flex-start;
 }
 
 .hero #box6 {
-  width: 100%;
-  height: 100%;
-  grid-column: 3 / 4;
+  width: 5em;
+  height: 5em;
+
+  grid-column: 4 / 5;
   grid-row: 7 / 8;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
 
 .hero #box1,
 #box2,
 #box3 {
-  background-color: #984447;
+  background-color: #6591a4;
 }
 
 .hero #box4,
 #box5,
 #box6 {
-  background-color: #fba94b;
+  width: 5em;
+  background-color: #ac3931;
 }
 
 .hero #card1 {
@@ -237,38 +280,50 @@ body {
   grid-row: 12 / 24;
 }
 
-.hero .card img {
-  grid-column: 3 / 7;
+.hero .card #camera {
+  background: url("img/camera.png");
+  background-position: center;
+  background-size: cover;
+  grid-column: 4 / 10;
   grid-row: 3 / 7;
   width: 100%;
   height: 100%;
-  min-height: 100%;
-  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  filter: brightness(0.9);
+}
+
+.hero .card #camera:hover {
+  filter: brightness(1);
 }
 
 .hero #projectDescription {
   display: grid;
 
-  font-size: 2rem;
-  grid-column: 8 / 12;
-  grid-row: 4 / 5;
+  font-size: 3rem;
+  grid-column: 2 / 12;
+  grid-row: 9 / 10;
   justify-self: center;
   align-self: center;
-  color: #984447;
-  font-family: "Source Sans Pro", sans-serif;
+  color: #fba94b;
+  font-family: "Work Sans", sans-serif;
+
   font-weight: 400;
 }
 
 .hero #projectParagraph {
   font-size: 1.25rem;
-  grid-column: 8 / 12;
-  grid-row: 5 / 8;
+  grid-column: 2 / 12;
+  grid-row: 10 / 11;
   justify-self: center;
   align-self: flex-start;
   color: #faedca;
-  font-family: "Source Sans Pro", sans-serif;
+
+  font-family: "Work Sans", sans-serif;
+
   font-weight: 400;
   line-height: 1.6;
+  max-width: 45ch;
 }
 
 /* .hero #card2 {
