@@ -1,7 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let mainWrapper = gsap.utils.toArray(".wrapper");
-let cardElements = gsap.utils.toArray(".card");
 
 gsap.set("#greetingHeader1", { opacity: 0 });
 gsap.set("#greetingHeader2", { xPercent: -125 });
@@ -13,6 +12,19 @@ gsap.set("#scrollArrow", { opacity: 0 });
 
 mainWrapper.forEach((wrapper) => {
   let wrapperElements = wrapper.querySelectorAll(".wrapper");
+
+  let menuAnimation = gsap.to("#menuBar", {
+    paused: true,
+    rotate: 90,
+    duration: 0.4,
+  });
+
+  menuBar.addEventListener("mouseenter", () => menuAnimation.play());
+  menuBar.addEventListener("mouseleave", () => menuAnimation.reverse());
+
+  menuBar.addEventListener("click", () => {
+    console.log("bajs");
+  });
 
   let tl1 = gsap.timeline();
 

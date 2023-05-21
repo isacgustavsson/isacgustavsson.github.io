@@ -49,12 +49,13 @@ body {
 
 /*************** Navigation icons ***************/
 
-.wrapper #menu-bar {
-  grid-column: 12 / 13;
+.wrapper #menuBar {
+  grid-column: 12;
   grid-row: 1 / 2;
   justify-self: center;
   align-self: center;
-  scale: 2;
+  scale: 1.5;
+  padding: 1em;
   color: #fba94b;
 }
 
@@ -269,4 +270,43 @@ body {
 #whiteSpace {
   grid-column: 1 / 13;
   grid-row: 23 / 32;
+}
+
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  .wrapper #menuBar {
+    grid-column: 8;
+    grid-row: 1;
+    justify-self: flex-end;
+    align-self: flex-end;
+    scale: 0.85;
+    padding: 1em;
+    color: #fba94b;
+  }
+
+  #greetingHeader1 {
+    grid-column: 2 / 7;
+    grid-row: 2 / 3;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+
+  #greetingHeader2 {
+    grid-column: 2 / 8;
+    grid-row: 4 / 5;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-size: 1.15rem;
+    color: #f7f3e3;
+  }
+
+  #scrollArrow {
+    grid-column: 7 / 8;
+    grid-row: 4 / 5;
+    justify-self: flex-end;
+    align-self: center;
+    scale: 0.4;
+    color: #fba94b;
+  }
 }
