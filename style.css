@@ -20,7 +20,7 @@ body {
 /*************** Main scroller ***************/
 
 .wrapper {
-  background: #0d1821;
+  background: #0d1321;
 
   min-width: 100%;
   height: 100%;
@@ -31,7 +31,7 @@ body {
   background-size: cover;
 
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(1em, 1fr));
   grid-auto-rows: 5em;
   grid-gap: 1rem;
 
@@ -54,47 +54,30 @@ body {
   grid-row: 1 / 2;
   justify-self: center;
   align-self: center;
-  scale: 1.5;
   padding: 1em;
-  color: #fba94b;
-}
-
-/* .parallax #behance-icon {
-  width: 100%;
-  height: 3rem;
-  grid-column: 10 / 11;
-  grid-row: 1 / 2;
-  object-fit: contain;
-  background: none;
-  align-self: center;
-  justify-self: center;
-}
-
-#behance-icon:hover,
-#instagram-icon:hover,
-#github-icon:hover {
-  cursor: pointer;
+  color: #e6b89c;
 }
 
 /*************** Hero Section ***************/
 
 #greetingHeader1 {
-  grid-column: 2 / 13;
-  grid-row: 3 / 4;
-  justify-self: flex-start;
-  align-self: flex-start;
+  grid-column: 2 / 5;
+  grid-row: 3 / 5;
+  justify-self: center;
+  align-self: flex-end;
   font-size: 4rem;
-  color: #fba94b;
+  color: #aa4465;
 
   font-family: "Space Grotesk", sans-serif;
 
   font-weight: 700;
   font-kerning: auto;
+  padding-right: 1.75em;
 }
 
 #greetingHeader2 {
-  grid-column: 2 / 9;
-  grid-row: 4 / 5;
+  grid-column: 2 / 6;
+  grid-row: 5 / 6;
   align-self: center;
   justify-self: flex-start;
   align-self: flex-start;
@@ -104,32 +87,39 @@ body {
   font-kerning: normal;
 
   font-size: 1.75rem;
-  color: #f7f3e3;
+  color: #e6b89c;
 }
 
 #scrollArrow {
-  grid-column: 9 / 10;
-  grid-row: 4 / 5;
-  justify-self: flex-start;
-  align-self: center;
-  scale: 1;
-  color: #fba94b;
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+  justify-self: center;
+  align-self: flex-start;
+  scale: 0.75;
+  color: #aa4465;
+}
+
+#workHeaderOverlay {
+  grid-column: 2 / 11;
+  grid-row: 10 / 12;
+  background-color: #e6b89c;
+  opacity: 0;
 }
 
 #workHeader1 {
-  grid-column: 1 / 13;
+  grid-column: 2 / 11;
   grid-row: 10 / 12;
   justify-self: center;
   align-self: center;
   font-size: 19rem;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-  color: #0d1821;
-  font-kerning: auto;
+  color: #aa4465;
+  mix-blend-mode: exclusion;
 }
 
 #workHeader2 {
-  grid-column: 2 / 12;
+  grid-column: 2 / 11;
   grid-row: 13 / 14;
   justify-self: center;
   align-self: flex-start;
@@ -141,14 +131,7 @@ body {
   font-size: 1.25rem;
 
   max-width: 65ch;
-  color: #f7f3e3;
-}
-
-#workHeaderOverlay {
-  grid-column: 2 / 12;
-  grid-row: 10 / 12;
-  background-color: #fba94b;
-  opacity: 0;
+  color: #e6b89c;
 }
 
 #box1 {
@@ -185,7 +168,7 @@ body {
   width: 5em;
   height: 5em;
 
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   grid-row: 20 / 22;
   justify-self: flex-end;
   align-self: flex-end;
@@ -195,7 +178,7 @@ body {
   width: 5em;
   height: 5em;
 
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   grid-row: 22 / 23;
   justify-self: flex-end;
   align-self: flex-start;
@@ -205,7 +188,7 @@ body {
   width: 5em;
   height: 5em;
 
-  grid-column: 4 / 5;
+  grid-column: 3 / 4;
   grid-row: 22 / 23;
   justify-self: flex-start;
   align-self: flex-start;
@@ -214,21 +197,21 @@ body {
 #box1,
 #box2,
 #box3 {
-  background-color: #5b8e7d;
+  background-color: #5e9a85;
 }
 
 #box4,
 #box5,
 #box6 {
   width: 5em;
-  background-color: #bc4b51;
+  background-color: #aa4465;
 }
 
 .wrapper #camera {
   background: url("img/camera.png");
   background-position: center;
   background-size: cover;
-  grid-column: 4 / 10;
+  grid-column: 3 / 10;
   grid-row: 18 / 22;
   width: 100%;
   height: 100%;
@@ -247,7 +230,7 @@ body {
   grid-row: 23 / 24;
   justify-self: center;
   align-self: center;
-  color: #fba94b;
+  color: #aa4465;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
 }
@@ -258,7 +241,7 @@ body {
   grid-row: 24 / 25;
   justify-self: center;
   align-self: flex-start;
-  color: #f7f3e3;
+  color: #e6b89c;
 
   font-family: "Roboto", sans-serif;
   font-size: 1.125;
@@ -287,16 +270,17 @@ body {
     align-self: center;
     scale: 0.85;
     padding: 1em;
-    color: #fba94b;
+    scale: 0.85;
   }
 
   #greetingHeader1 {
     grid-column: 2 / 6;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-self: center;
-    align-self: flex-start;
-    font-size: 3.5rem;
-    line-height: 1.2;
+    align-self: flex-end;
+    font-size: 2.5rem;
+    line-height: 1.125;
+    padding-right: 1.4em;
   }
 
   #greetingHeader2 {
@@ -305,50 +289,48 @@ body {
     justify-self: flex-start;
     align-self: flex-start;
     font-size: 1rem;
-    color: #f7f3e3;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
   }
 
   #scrollArrow {
-    grid-column: 5;
-    grid-row: 4 / 5;
-    justify-self: flex-end;
-    align-self: center;
-    scale: 0.4;
-    color: #fba94b;
+    grid-column: 5 / 6;
+    grid-row: 4;
+    justify-self: center;
+    align-self: flex-start;
+    scale: 0.5;
+    padding-left: 0.1em;
   }
 
   #workHeaderOverlay {
-    height: 4em;
-    grid-column: 1 / 7;
-    grid-row: 9 / 10;
-    background-color: #fba94b;
+    grid-column: 4 / 7;
+    grid-row: 8 / 10;
     opacity: 0;
   }
 
   #workHeader1 {
-    grid-column: 3 / 5;
-    grid-row: 9 / 10;
+    grid-column: 2 / 6;
+    grid-row: 8 / 10;
     align-self: center;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 800;
     font-kerning: auto;
-    padding-bottom: 0.15em;
+    padding-bottom: 0.15rem;
+    padding-left: 0.5rem;
   }
 
   #workHeader2 {
-    grid-column: 2 / 6;
-    grid-row: 11;
+    grid-column: 1 / 7;
+    grid-row: 10 / 12;
     justify-content: center;
     align-self: center;
 
     font-family: "Lexend Deca", sans-serif;
-    /* font-family: "Roboto", sans-serif; */
     font-weight: 400;
     font-kerning: normal;
-    font-size: 0.95rem;
-    line-height: 1.25;
-
-    color: #f7f3e3;
+    font-size: 1rem;
+    line-height: 1.2;
+    max-width: 28ch;
   }
 
   .wrapper #camera {
@@ -409,7 +391,6 @@ body {
 
     justify-self: center;
     align-self: center;
-    color: #fba94b;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
   }
@@ -421,10 +402,9 @@ body {
     justify-self: center;
     align-self: flex-start;
     text-align: left;
-    color: #f7f3e3;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     max-width: 30ch;
   }
 }
@@ -444,7 +424,6 @@ body {
     align-self: center;
     scale: 1.25;
     padding: 1em;
-    color: #fba94b;
   }
 
   #greetingHeader1 {
@@ -462,7 +441,6 @@ body {
     justify-self: flex-start;
     align-self: flex-start;
     font-size: 1rem;
-    color: #f7f3e3;
   }
 
   #scrollArrow {
@@ -471,13 +449,11 @@ body {
     justify-self: center;
     align-self: center;
     scale: 0.5;
-    color: #fba94b;
   }
 
   #workHeaderOverlay {
     grid-column: 1 / 13;
     grid-row: 8 / 10;
-    background-color: #fba94b;
     opacity: 0;
   }
 
@@ -485,7 +461,7 @@ body {
     grid-column: 2 / 12;
     grid-row: 8 / 10;
     align-self: center;
-    font-size: 7rem;
+    font-size: 10rem;
     font-weight: 800;
     font-kerning: auto;
     padding-bottom: 0.15em;
@@ -501,7 +477,6 @@ body {
     font-kerning: normal;
     font-size: 1rem;
     line-height: 1.25;
-    color: #f7f3e3;
   }
 
   .wrapper #camera {
@@ -562,7 +537,6 @@ body {
 
     justify-self: center;
     align-self: center;
-    color: #fba94b;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
   }
@@ -574,10 +548,156 @@ body {
     justify-self: center;
     align-self: flex-start;
     text-align: left;
-    color: #f7f3e3;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    max-width: 30ch;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .wrapper {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(12, minmax(2em, 1fr));
+    grid-gap: 0;
+  }
+
+  .wrapper #menuBar {
+    grid-column: 11 / 13;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    scale: 1.5;
+    padding: 1.5em;
+  }
+
+  #greetingHeader1 {
+    grid-column: 2 / 6;
+    grid-row: 2 / 4;
+    justify-self: center;
+    align-self: flex-end;
+    font-size: 3.5rem;
+    line-height: 1.125;
+    padding-right: 0.5em;
+  }
+
+  #greetingHeader2 {
+    grid-column: 2 / 7;
+    grid-row: 4 / 5;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-size: 1.25rem;
+    padding-top: 0.25em;
+  }
+
+  #scrollArrow {
+    grid-column: 6 / 7;
+    grid-row: 4 / 5;
+    justify-self: flex-end;
+    align-self: center;
+    scale: 1.5;
+  }
+
+  #workHeaderOverlay {
+    grid-column: 2 / 12;
+    grid-row: 8 / 10;
+    opacity: 0;
+  }
+
+  #workHeader1 {
+    grid-column: 2 / 12;
+    grid-row: 8 / 10;
+    align-self: center;
+    font-size: 9rem;
+    font-weight: 800;
+    font-kerning: auto;
+  }
+
+  #workHeader2 {
+    grid-column: 2 / 12;
+    grid-row: 10 / 12;
+    justify-content: center;
+    align-self: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-kerning: normal;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .wrapper #camera {
+    background: url("img/camera.png");
+    background-position: center;
+    background-size: cover;
+    grid-column: 3 / 11;
+    grid-row: 16 / 20;
+  }
+
+  #box1 {
+    grid-column: 10;
+    grid-row: 15 / 16;
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+
+  #box2 {
+    grid-column: 11;
+    grid-row: 15 / 16;
+    justify-self: flex-start;
+    align-self: flex-end;
+    padding: 1em;
+  }
+
+  #box3 {
+    grid-column: 11;
+    grid-row: 16 / 17;
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+
+  #box4 {
+    grid-column: 2 / 3;
+    grid-row: 19 / 20;
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+
+  #box5 {
+    grid-column: 2 / 3;
+    grid-row: 20 / 21;
+    justify-self: flex-end;
+    align-self: flex-start;
+  }
+
+  #box6 {
+    grid-column: 3 / 4;
+    grid-row: 20 / 21;
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+
+  #projectDescription {
+    grid-column: 4 / 10;
+    grid-row: 21 / 22;
+    font-size: 1.5rem;
+
+    justify-self: center;
+    align-self: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+  }
+
+  #projectParagraph {
+    display: flex;
+    grid-column: 2 / 12;
+    grid-row: 22 / 24;
+    justify-self: center;
+    align-self: flex-start;
+    text-align: left;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
     max-width: 30ch;
   }
 }
